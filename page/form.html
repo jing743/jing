@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程信息 - 选课系统</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#64748b',
+                        success: '#10b981',
+                        warning: '#f59e0b',
+                        danger: '#ef4444',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-book text-primary text-xl"></i>
+                <h1 class="text-lg font-bold">选课系统 - 课程信息</h1>
+            </div>
+            <div>
+                <a href="#" class="text-gray-600 hover:text-primary mr-4"><i class="fa fa-arrow-left"></i> 返回列表</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-6">
+        
+        <div class="bg-white p-5 rounded-lg shadow-sm mb-6">
+            <h2 class="text-2xl font-bold mb-2">数据结构与算法</h2>
+            
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div class="bg-white p-5 rounded-lg shadow-sm">
+                <h3 class="font-semibold text-lg mb-4 pb-2 border-b">基本信息</h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between">
+                        <span class="text-gray-600">学分：</span>
+                        <span>4学分</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-600">学时：</span>
+                        <span>64学时（48理论+16实验）</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-600">课程类型：</span>
+                        <span>专业必修课</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-600">考核方式：</span>
+                        <span>考试</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-600">开课单位：</span>
+                        <span>软件学院</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-600">选课人数：</span>
+                        <span>86/100人</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-5 rounded-lg shadow-sm">
+                <h3 class="font-semibold text-lg mb-4 pb-2 border-b">授课信息</h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between">
+                        <span class="text-gray-600">授课教师：</span>
+                        <span>李xx</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-600">职称：</span>
+                        <span>教授</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-600">办公室：</span>
+                        <span>软件大楼305</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-600">联系电话：</span>
+                        <span>12345678910</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-600">邮箱：</span>
+                        <span>school.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-5 rounded-lg shadow-sm">
+                <h3 class="font-semibold text-lg mb-4 pb-2 border-b">上课安排</h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between items-center">
+                        <span class="text-gray-600">理论课：</span>
+                        <span>周二 3-4节，周四 1-2节</span>
+                    </li>
+                    <li class="flex justify-between items-center">
+                        <span class="text-gray-600">理论课教室：</span>
+                        <span>11号楼102</span>
+                    </li>
+                    <li class="flex justify-between items-center">
+                        <span class="text-gray-600">实验课：</span>
+                        <span>周五 5-8节</span>
+                    </li>
+                    <li class="flex justify-between items-center">
+                        <span class="text-gray-600">实验课教室：</span>
+                        <span>田园203</span>
+                    </li>
+                    <li class="flex justify-between items-center">
+                        <span class="text-gray-600">开始日期：</span>
+                        <span>2025-09-01</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 课程简介 -->
+        <div class="bg-white p-5 rounded-lg shadow-sm mb-6">
+            <h3 class="font-semibold text-lg mb-3">课程简介</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">
+                本课程主要介绍数据结构的基本概念、原理和实现方法，以及常用算法的设计与分析。
+                内容包括线性表、栈、队列、串、数组、树、图等基本数据结构，以及排序、查找等常用算法。
+                通过本课程的学习，使学生掌握数据结构与算法的基本理论和应用技巧，培养学生分析问题和解决问题的能力，
+                为后续专业课程的学习和软件开发实践奠定基础。
+            </p>
+        </div>
+
+        <!-- 课程大纲 -->
+        <div class="bg-white p-5 rounded-lg shadow-sm mb-6">
+            <h3 class="font-semibold text-lg mb-3">课程大纲</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full text-sm">
+                    <thead>
+                        <tr class="bg-gray-50">
+                            <th class="py-2 px-3 text-left border-b">周次</th>
+                            <th class="py-2 px-3 text-left border-b">主要内容</th>
+                            <th class="py-2 px-3 text-left border-b">学时</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-2 px-3">1-2</td>
+                            <td class="py-2 px-3">数据结构基本概念与算法分析</td>
+                            <td class="py-2 px-3">6</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-2 px-3">3-4</td>
+                            <td class="py-2 px-3">线性表</td>
+                            <td class="py-2 px-3">6</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-2 px-3">5-6</td>
+                            <td class="py-2 px-3">栈与队列</td>
+                            <td class="py-2 px-3">6</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3" colspan="3">
+                                <button class="text-primary text-sm hover:underline">查看全部大纲</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200 text-center">
+            <button class="bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 mr-4">
+                <i class="fa fa-check-circle mr-1"></i> 选择此课程
+            </button>
+            
+        </div>
+    </main>
+    
+
+    <script>
+        document.querySelector('button:contains("查看全部大纲")').addEventListener('click', function() {
+            alert('完整课程大纲将在这里显示');
+        });
+        
+        document.querySelector('button:contains("选择此课程")').addEventListener('click', function() {
+            if(confirm('确定要选择"数据结构与算法"这门课程吗？')) {
+                alert('选课成功！该课程已添加到您的选课记录中');
+            }
+        });
+    </script>
+</body>
+</html>
+    

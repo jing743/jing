@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选课系统 - 选课记录</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css" media="all">
+	<link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css" media="all">
+	<link rel="stylesheet" href="../css/public.css" media="all">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#64748b',
+                        success: '#10b981',
+                        danger: '#ef4444',
+                        light: '#f1f5f9',
+                        dark: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-shadow {
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-graduation-cap text-primary text-2xl"></i>
+                <h1 class="text-xl font-bold text-dark">学生选课系统</h1>
+            </div>
+            </div>
+        </div>
+    </header> 
+    <main class="container mx-auto px-4 py-6">
+        <div class="mb-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-dark mb-2 md:mb-0">我的选课记录</h2>
+                <div class="flex space-x-2">
+                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-md text-secondary hover:bg-gray-50 transition">
+                        <i class="fa fa-arrow-left mr-1"></i> 返回选课
+                    </a>
+                </div>
+            </div>
+            <div class="text-sm text-secondary mt-1">
+                <a href="#" class="hover:text-primary">首页</a> &gt; <a href="#" class="hover:text-primary">选课中心</a> &gt; 我的选课记录
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg p-4 mb-6 card-shadow">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div>
+                    <p class="text-sm text-secondary">学号</p>
+                    <p class="font-medium">000000001</p>
+                </div>
+                <div>
+                    <p class="text-sm text-secondary">姓名</p>
+                    <p class="font-medium">王xx</p>
+                </div>
+                <div>
+                    <p class="text-sm text-secondary">学院</p>
+                    <p class="font-medium">软件学院</p>
+                </div>
+                <div>
+                    <p class="text-sm text-secondary">当前学期</p>
+                    <p class="font-medium">2023-2024学年 第一学期</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 选课统计 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="bg-white rounded-lg p-4 card-shadow">
+                <p class="text-sm text-secondary">已选课程总数</p>
+                <p class="text-2xl font-bold text-primary mt-1">5门</p>
+            </div>
+            <div class="bg-white rounded-lg p-4 card-shadow">
+                <p class="text-sm text-secondary">总学分</p>
+                <p class="text-2xl font-bold text-success mt-1">15学分</p>
+            </div>
+            <div class="bg-white rounded-lg p-4 card-shadow">
+                <p class="text-sm text-secondary">上课总天数</p>
+                <p class="text-2xl font-bold text-dark mt-1">5天/周</p>
+            </div>
+        </div>
+
+        
+        <div class="bg-white rounded-lg overflow-hidden card-shadow mb-6">
+            <div class="p-4 border-b">
+                <h3 class="font-semibold text-lg">已选课程列表</h3>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">课程代码</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">课程名称</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">学分</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">教师</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">上课时间</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-secondary uppercase tracking-wider">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">00001</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="font-medium text-dark">大学英语</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">3</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">李xx</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">周一 1-2节</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                <button class="text-danger hover:text-danger/80 transition">
+                                    <i class="fa fa-times-circle mr-1"></i>退课
+                                </button>
+                            </td>
+                        </tr>
+                        
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">00002</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="font-medium text-dark">高等数学</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">4</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">王xx</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">周二 3-4节</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                <button class="text-danger hover:text-danger/80 transition">
+                                    <i class="fa fa-times-circle mr-1"></i>退课
+                                </button>
+                            </td>
+                        </tr>
+                        
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">00003</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="font-medium text-dark">大学物理</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">3</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">张xx</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">周三 1-2节</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                <button class="text-danger hover:text-danger/80 transition">
+                                    <i class="fa fa-times-circle mr-1"></i>退课
+                                </button>
+                            </td>
+                        </tr>
+                        
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">00004</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="font-medium text-dark">C语言</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">3</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">刘xx</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">周四 5-6节</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                <button class="text-danger hover:text-danger/80 transition">
+                                    <i class="fa fa-times-circle mr-1"></i>退课
+                                </button>
+                            </td>
+                        </tr>
+                        
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">00005</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="font-medium text-dark">数据结构与基础</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">2</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">陈xx</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">周五 3-4节</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                <button class="text-danger hover:text-danger/80 transition">
+                                    <i class="fa fa-times-circle mr-1"></i>退课
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="bg-blue-50 border-l-4 border-primary p-4 rounded mb-6">
+            <div class="flex">
+                <div class="flex-shrink-0">
+                    <i class="fa fa-info-circle text-primary"></i>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm text-blue-700">
+                        选课退课截止日期：2025年9月30日。请在截止日期前完成选课调整，逾期将无法修改。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('button:contains("退课")').forEach(button => {
+            button.addEventListener('click', function() {
+                const courseName = this.closest('tr').querySelector('td:nth-child(2)').textContent.trim();
+                if(confirm(`确定要退选课程《${courseName}》吗？`)) {
+                    
+                    this.closest('tr').classList.add('bg-red-50');
+                    setTimeout(() => {
+                        this.closest('tr').remove();
+                        alert(`已成功退选《${courseName}》`);
+                    }, 500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
