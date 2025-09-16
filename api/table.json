@@ -1,0 +1,80 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "id": 10000,
+      "username": "张xx",
+      "sex": "女",
+      "classify": "高等数学",
+      "score": 57
+    },
+    {
+      "id": 10001,
+      "username": "李xx",
+      "sex": "男",
+      "classify": "离散数学",
+      "score": 27
+    },
+    {
+      "id": 10002,
+      "username": "高xx",
+      "sex": "女",
+      "classify": "大学英语",
+      "score": 31
+    },
+    {
+      "id": 10003,
+      "username": "王xx",
+      "sex": "女",
+      "classify": "大学物理",
+      "score": 68
+    },
+    {
+      "id": 10004,
+      "username": "薛xx",
+      "sex": "男",
+      "classify": "数据结构与分析",
+      "score": 6
+    },
+    {
+      "id": 10005,
+      "username": "刘xx",
+      "sex": "女",
+      "classify": "C语言",
+      "score": 87
+    },
+    {
+      "id": 10006,
+      "username": "王xx",
+      "sex": "女",
+      "sign": "签名-6",
+      "classify": "Java",
+      "score": 34
+    },
+    {
+      "id": 10007,
+      "username": "赵xx",
+      "sex": "男",
+      "sign": "签名-7",
+      "classify": "高等数学",
+      "score": 28
+    },
+    {
+      "id": 10008,
+      "username": "孙xx",
+      "sex": "男",
+      "sign": "签名-8",
+      "classify": "C语言",
+      "score": 14
+    },
+    {
+      "id": 10009,
+      "username": "李xx",
+      "sex": "女",
+      "classify": "大学物理",
+      "score": 75
+    }
+  ]
+}
